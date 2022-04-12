@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+	<style>
+        ul.demo {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+		h4.zero_bottom {
+		    margin-bottom: 0;
+			color: darkblue;
+		}
+		label.bottom_ten {
+		    display: inline-block;
+			margin-bottom: 0.5em;
+		}
+		label.top_ten {
+		    display: inline-block;
+			margin-top: 0.5em;		
+		}
+		p.in_text {
+		    margin-top: 0em;
+			margin-bottom: 0.25em;
+		}
+    </style>
+</head>
+<body>
+    <h2>Tell us about yourself</h2>
+	<form action="" name="questionnaire" method="post">
+	    <fieldset>
+		    <legend><b>Briefly about yourself:</b></legend>
+			<ul class="demo">
+			    <li>
+				    <label for="fname" class="bottom_ten">First name:</label>
+				    <input type="text" id="fname" name="fname">
+				</li>
+				<li>
+				    <label for="lname" class="bottom_ten">Last name:</label>
+                    <input type="text" id="lname" name="lname">
+				</li>
+				<li>
+				    <span>Sex:</span>
+					<input type="radio" id="radio11" name="radio1" value="male">
+					<label for="radio11">male</label>
+					<input type="radio" id="radio12" name="radio1" value="female">
+					<label for="radio12">female</label>
+				</li>
+				<li>
+				    <label for="age" class="bottom_ten">Age:</label>
+					<input type="number" id="age" name="age" min="0" max="99">
+					<label for="age">year's old</label>
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+		    <legend><b>Details about yourself:</b></legend>
+			<ul class="demo">
+			    <li>
+				    <input type="radio" id="radio21" name="radio2" value="man">
+					<label for="radio21">man</label>
+                    <br>
+				    <input type="radio" id="radio22" name="radio2" value="woman">
+					<label for="radio22" class="bottom_ten">woman</label>
+				</li>
+				<li>
+				    <ul class="demo">
+				        <li>
+					        <input type="date" id="date" name="date">
+					        <label for="date" class="bottom_ten">Date of birth</label>
+				        </li>
+				        <li>
+				            <input type="text" id="maritalstatus" name="maritalstatus">
+					        <label for="maritalstatus" class="bottom_ten">Marital status</label>
+				        </li>
+				        <li>
+				            <input type="text" id="socialstatus" name="socialstatus">
+			        		<label for="socialstatus" class="bottom_ten">Social status</label>
+				        </li>
+				        <li>
+				            <input type="text" id="residence" name="residence">
+					        <label for="residence" class="bottom_ten">Residence</label>
+				        </li>
+					</ul>
+				</li>
+				<li>
+				    <h4 class="zero_bottom">What you usually do on the weekends:</h4>
+					<ul class="demo">
+				        <li>
+						    <input type="checkbox" id="chboxsleeping" name="chboxsleeping">
+					        <label for="chboxsleeping">Sleeping</label>
+	        	        </li>
+				        <li>
+				            <input type="checkbox" id="chboxwalking" name="chboxwalking">
+					        <label for="chboxwalking">Walking with friends</label>
+				        </li>
+				        <li>
+				            <input type="checkbox" id="chboxfishing" name="chboxfishing">
+					        <label for="chboxfishing">Fishing trip</label>
+				        </li>
+				        <li>
+				            <input type="checkbox" id="chboxplaying" name="chboxplaying">
+					        <label for="chboxplaying">Playing games</label>
+				        </li>
+					</ul>
+				</li>	
+				<li>
+				    <h4 class="zero_bottom">How often you read the news:</h4>			
+				    <select name="news" id="news">
+                        <option value="notday">Not every day</option>
+                        <option value="oneday">Once a day</option>
+                        <option value="fiveday">2-5 times a day</option>
+                        <option value="often">More often</option>
+                    </select>
+				</li>
+				<li>
+				    <h4 class="zero_bottom">How many books have you read in your life:</h4>
+				    <ul class="demo">
+					    <li>
+				            <input type="radio" id="radiobook1" name="radiobook" value="0-10">
+					        <label for="radiobook1">0-10</label>
+				        </li>
+				        <li>
+				            <input type="radio" id="radiobook2" name="radiobook" value="11-20">
+					        <label for="radiobook2">11-20</label>
+				        </li>
+				        <li>
+				            <input type="radio" id="radiobook3" name="radiobook" value="21-50">
+					        <label for="radiobook3">21-50</label>
+				        </li>
+				        <li>
+				            <input type="radio" id="radiobook4" name="radiobook" value="50+">
+					        <label for="radiobook4">50+</label>
+				        </li>
+					</ul>
+				<li>
+				    <br>
+				    <label for="comments"><b>Your comments:</b></label><br>
+				    <textarea id="comments" name="comments" rows="10" cols="50"></textarea>
+				</li>
+				<li>
+				    <select name="position" id="position" multiple="multiple" size="3">
+                        <option value="first">First position</option>
+                        <option value="second">Second position</option>
+                        <option value="third">Third position</option>
+                    </select>
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+		    <legend><b>And finally:</b></legend>
+			<ul class="demo">
+			    <li><input type="text" name="input" id="input" placeholder="This field has been entered for you" size="50"></li>
+				<li>
+				    <label for="email" class="top_ten"><b>Email:</b></label><br>
+					<input type="email" name="email" id="email">
+				</li>
+				<li>
+				    <h4 class="zero_bottom">Do you want to subscribe to the most fashionable spam newsletter?</h4>
+					<p class="in_text"><i>Select a category</i></p>
+				    <ul class="demo">
+				        <li>
+				            <input type="checkbox" id="chbox31" name="chbox31">
+					        <label for="chbox31">Equipment</label>
+				        </li>
+				        <li>
+				            <input type="checkbox" id="chbox32" name="chbox32">
+					        <label for="chbox32">How to cook dinner</label>
+				        </li>
+				        <li>
+				            <input type="checkbox" id="chbox33" name="chbox33">
+					        <label for="chbox33">Earn a million in 2 days</label>
+				        </li>
+					</ul>
+				</li>
+				<li>
+				    <h4 class="zero_bottom">How difficult the task:</h4></li>
+				    <ul class="demo">
+				        <li>
+				            <input type="radio" id="hardtask1" name="hardtask" value="1">
+					        <label for="hardtask1">Not at all</label>
+				        </li>
+				        <li>
+				            <input type="radio" id="hardtask2" name="hardtask" value="2">
+					        <label for="hardtask2">So-so</label>
+				        </li>
+				        <li>
+				            <input type="radio" id="hardtask3" name="hardtask" value="3">
+					        <label for="hardtask3">Hard</label>
+				        </li>
+					</ul>
+				</li>
+			</ul>
+		</fieldset>
+	    <input type="submit" value="Submit">
+	</form>
+	<footer>
+	    <p>(c) 2022,
+		    <a href="mailto:lio.ck.ua@gmail.com">Olena Tsylinska</a>
+	    </p>
+	</address>
+	</footer>
+</body>
+</html>
